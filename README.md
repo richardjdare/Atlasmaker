@@ -1,7 +1,9 @@
-#AtlasMaker
+# AtlasMaker
+![AtlasMaker](/media/atlasmaker-screen.jpg)
+
 AtlasMaker is a Photoshop script for generating texture atlases and tile grids. In other words, it takes a directory full of images and arranges them into a single, larger image. It's intended primarily for game development, but can also be used to create CSS sprites for the web.
 
-##Features
+## Features
 * Cross platform - tested in Photoshop CS3,CS4,CS5 on Windows and MacOSX.
 * Open Source
 * Several image sorting algorithms. Find the most efficient one for your textures.
@@ -9,7 +11,7 @@ AtlasMaker is a Photoshop script for generating texture atlases and tile grids. 
 * Custom data file export
 * Extendable - It's easy to add your own rectangle packing algorithms and sorting methods
 
-##Installing AtlasMaker
+## Installing AtlasMaker
 There are two ways of running AtlasMaker in Photoshop.
 Unzip atlasmaker to your photoshop scripts folder. On windows this is usually:
 c:\Program Files\Adobe\Photoshop CSsomething\Presets\Scripts
@@ -21,7 +23,7 @@ When you next start Photoshop, AtlasMaker should appear in the File->Scripts men
 
 Or you can run the script without installing by unzipping the AtlasMaker folder somewhere, selecting Scripts->Browse from the file menu and then selecting AtlasMaker.jsx
 
-##Quick Start Guide
+## Quick Start Guide
 The first thing to do is select a directory of images by clicking "browse" at the top of the window. Once you have done this, AtlasMaker will scan through the images and collect size information about them.
 
 You'll notice that some text will appear underneath "Number of Files". This is a notification from the Tile Grid Packer telling you how many rows and columns your images will take up given the default document size. Different packing methods provide different notification messages according to their nature.
@@ -36,7 +38,7 @@ Next, click "Document Settings" and you will be able to set the size of the text
 
 Now click "Create Atlas" and you're done.
 
-##AtlasMaker Reference Guide
+## AtlasMaker Reference Guide
 * Interface Overview
  * File selection and notification area
  * Panel selection area
@@ -45,12 +47,12 @@ Now click "Create Atlas" and you're done.
  * Export file panel
 * Extending AtlasMaker
 
-###Interface Overview
+### Interface Overview
 The AtlasMaker interface is split into three main parts. The source file selection and notification area is at the top of the window. Below that are the texture atlas options, which have been split into three panels to save space. You can flip between each panel by clicking on the items in the panel selection area on the left hand side.
 
 At the very bottom of the window are three self explanatory buttons. About, Create Atlas and Cancel.
 
-###File Selection and Notification Area
+### File Selection and Notification Area
 At the top of this area is the file selector. clicking "browse" will open a file requester that you can use to select the directory containing the images you want in your atlas. AtlasMaker will then scan through the images and make some initial calculations. AtlasMaker can load any images photoshop can. Any non-image files in the selected folder will be ignored.
 
 Underneath the file selector is the notification area. It contains the following information:
@@ -62,7 +64,7 @@ The notification area can contain information provided by different packing meth
 
 Items in the notification area may change when you edit atlas options.
 
-###Atlas Settings Panel
+### Atlas Settings Panel
 Packing Method: This dropdown contains the available packing methods. By default there are 2: "Tile Grid" and "Texture Atlas"
 
 Sorting Method: This dropdown lets you choose how images are sorted before being put in the atlas. Different settings can result in better atlas generation depending on your data.
@@ -73,7 +75,7 @@ Rotate: Not implemented yet. In the future, AtlasMaker will be able to rotate im
 
 Margin: You can add a margin of any number of pixels around each image in the atlas. It works just like CSS margins.
 
-###Destination Image Panel
+### Destination Image Panel
 Document Name: Set the Photoshop document name (not the filename) of the destination image. If you have multiple images, use the tag #n to substitute the page number into the text.
 
 Width: The destination image width in pixels
@@ -84,7 +86,7 @@ Merge Layers: By default, AtlasMaker will give each texture its own layer in the
 Fill Background Layer with Background Color: This will create a filled background layer using whatever background color you have set in Photoshop.
 
 
-###Export File Panel
+### Export File Panel
 If you tick the “Enable datafile export” checkbox, AtlasMaker will create a text file, containing a chunk of text for each texture. Each chunk is generated from the text in the "Line Template" box. Tags are used to substitute information about each image into the text:
 
 **\#i** - Image index (0.. number of Images in directory)
