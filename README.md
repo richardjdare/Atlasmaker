@@ -3,6 +3,10 @@
 
 AtlasMaker is a Photoshop script for generating texture atlases and tile grids. In other words, it takes a directory full of images and arranges them into a single, larger image. It's intended primarily for game development, but can also be used to create CSS sprites for the web.
 
+![Examples](/media/test-atlases.jpg)
+
+*Created with AtlasMaker: left, a texture atlas with variable sized images. Right, a tile grid. Images used are randomly generated*
+
 ## Features
 * Cross platform - tested in Photoshop CS3,CS4,CS5,CC on Windows and MacOS X.
 * Open Source
